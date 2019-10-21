@@ -1,0 +1,65 @@
+.ghg-backstage-header{
+	padding-left: 100px;
+
+	
+}
+.ghg-backstage-content{
+	height: 600px;
+	width: 100%;
+	background-image: url(../img/logBanner.png);
+	background-repeat: no-repeat;
+	padding-top: 200px;
+}
+.ghg-backstage-login{
+	width: 480px;
+	padding: 10px;
+	position: absolute;
+	top: 12%;
+	right: 16%;
+	border-radius: 10px;
+	background: #fff;
+}
+.login-title{
+	border-bottom: 1px solid #e70;
+}
+.login-title-login{
+	margin-right: 200px;
+}
+.username,.password{
+	height: 50px;
+	width: 100%;
+	font-size: 14px;
+	padding-left: 45px;
+}
+.inputIco{
+	position: absolute;
+	top: 15px;
+	left: 14px;
+}
+.verify{
+	width: 45%;
+	height: 60px;
+	margin-left: 250px;
+	padding-left:10px ;
+}
+.verify-img{
+	position: absolute;
+	top: 0px;
+	left: 10px;
+}
+.btn-login{
+	width: 100%;
+	border-radius: 5px;
+}
+[for=name],[for=password]{
+	position: absolute;
+	top: -28px;
+	left: 6px;
+	color: red;
+}
+[for=verify]{
+	position: absolute;
+	top: -28px;
+	right:136px ;
+	color: red;
+}

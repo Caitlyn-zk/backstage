@@ -1,0 +1,83 @@
+/*后台侧边导航*/
+.ghg-leftsidebar {
+	width: 220px;
+	position: fixed;
+	left: 0;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+.leftsidebar-list {
+	width: 100%;
+	background: #f9f9f9;
+}
+.leftsidebar-list .ghg-leftTitle {
+	padding-left: 10px;
+	display: inline-block;
+	width: 100%;
+	height: 45px;
+	line-height: 44px;
+	font-size: 14px;
+	cursor: pointer;
+	border-right: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+}
+.leftsidebar-list b {
+	padding-right: 5px;
+	font-size: 20px;
+	color: #919191;
+}
+.leftsidebar-list b.icon-jia {
+	padding-right: 5px;
+	font-size: 20px;
+	color: #eb3c00;
+}
+.leftsidebar-list .ghg-leftTitle.active {
+	color: #eb3c00;
+}
+.leftsidebar-list .ghg-leftTitle.active b{
+	color: #eb3c00;
+}
+.leftsidebar-list .ghg-leftTitle.active .leftsidebar-list li {
+	
+}
+.leftsidebar-list li {
+	padding-left: 35px;
+	display: inline-block;
+	width: 100%;
+	height: 42px;
+	line-height: 41px;
+	font-size: 14px;
+	display: none;
+	border-right: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+}
+.leftsidebar-list li:last-child {
+	border-bottom: 1px solid #dedede;
+}
+.ghg-Y-axis {
+	display: inline-block;
+	height: 42px;
+	border-left: 1px dashed #dedede;
+}
+.ghg-X-axis {
+	display: inline-block;
+	width: 18px;
+	border-top:1px dashed #dedede;
+	vertical-align: 20px;
+	
+}
+.leftsidebar-list .ghg-lispan {
+	vertical-align: 15px;
+}
+.leftsidebar-list li.active {
+	color: #EB3C00;
+}
+.leftsidebar-list li.active .ghg-X-axis {
+	border-top:1px dashed #EB3C00;
+}
+.leftsidebar-list li.active .ghg-Y-axis {
+	border-left: 1px dashed #EB3C00;
+}
+.ghg-leftcont {
+	vertical-align: 2px;
+}

@@ -1,0 +1,219 @@
+/*后台界面的css样式*/
+/*标题*/
+.ghg-back-title{
+	width: 100%;
+	height: 100px;
+	background: #fff;
+	border-bottom: 2px solid #eb3a00;
+}
+.ghg-back-logo{
+	width: 440px;
+	height: 100%;
+	text-align: center;
+	float: left;
+}
+.ghg-back-login{
+	float: right;
+	width: 400px;
+	height: 100%;
+	margin-right: 120px;
+	text-align: center;
+	line-height: 26px;
+	padding: 20px 0;
+	color: #979797;
+}
+
+/* 右边 */
+.ghg-back-content{
+	width: 80%;
+	height: 800px;
+	float: left;
+	overflow: scroll;
+	overflow-x: 800px;
+}
+.ghg-back-content.active{
+	height: 1200px;
+}
+.ghg-back-content .banner{
+	height: 1200px;
+	width: 100%;
+}
+
+.ghg-back-content.active{
+	overflow: hidden
+}
+.ghg-back-content.active{
+	background: url(../../Front-page/img/banner07.jpg)no-repeat;
+	background-size: 1043px;
+	width: 1043px;
+	height: 550px;
+}
+.ghg-back-content .ghg-back-content-title{
+	width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background-color: #f2f2f2;
+    padding:  0 20px;
+}
+.ghg-back-content-title .icon-jia{
+	font-size: 28px;
+	color: #999999;
+}
+.ghg-back-anchor{
+	font-size: 14px;
+	margin-left: 10px;
+}
+.ghg-back-anchor a{
+	color: #eb3a00;
+}
+.ghg-back-page{
+	width: 96%;
+	height: 200px;
+	margin: 0 auto;
+}
+.ghg-back-inp{
+	margin-top: 15px;
+}
+.userinput{
+	width: 222px;
+	height: 42px;
+	border: 1px solid #ccc;
+	padding-left: 10px;
+
+}
+.userinput:focus{
+	border: 2px solid #eb3a00;
+}
+.userinput.on{
+	margin-right: 45px;
+}
+.ghg-back-buttom{
+	display: block;
+	width: 135px;
+	height: 40px;
+	background: #eb3a00;
+	float: left;
+	text-align: center;
+	color: #fff;
+	line-height: 40px;
+}
+table{
+	font-size: 14px;
+	text-align: center;
+}
+table td{
+	border: 1px solid #ccc;
+	height: 40px;
+	border-right: 0 solid #ccc;
+}
+.ghg-back-th{
+	background: #f2f2f2;
+}
+.ghg-back-td{
+	border: 0;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+table td:last-child {
+	border-right: 1px solid #ccc;
+}
+.ghg-back-content{
+	display: none;
+}
+.ghg-back-content.on{
+	display: block;
+}
+
+/*后台侧边导航*/
+
+.leftsidebar-list {
+	width: 17%;
+	background: #f9f9f9;
+}
+.leftsidebar-list .ghg-leftTitle {
+	display: inline-block;
+	width: 100%;
+	height: 45px;
+	line-height: 44px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.leftsidebar-list b {
+	padding-right: 5px;
+	font-size: 20px;
+	color: #919191;
+}
+/*.leftsidebar-list b.icon-jia {
+	padding-right: 5px;
+	font-size: 20px;
+	color: #eb3c00;
+}*/
+
+.leftsidebar-list li {
+	padding-left: 35px;
+	display: inline-block;
+	width: 100%;
+	height: 42px;
+	line-height: 41px;
+	font-size: 14px;
+	border-right: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+}
+.ghg-leftcont {
+	vertical-align: 2px;
+}
+.leftsidebar-list li.on{
+	color: #eb3c00;
+	font-weight: 600;
+}
+.leftsidebar-list b.on{
+	color: #eb3c00;
+}
+.iconfont.icon-xiala{
+	font-size: 16px;
+}
+.iconfont.icon-hehuoren{
+	font-size: 14px;
+}
+.ghg-back-table td img{
+	max-width: 100px;
+	max-height: 50px;
+}
+.ghg-back-table td span{
+	display: inline-block;
+	width: 140px;
+}
+.iconfont{
+	color: #919191;
+}
+.file{
+	/*color:transparent;*/
+	border: 0;
+	outline: none ;
+	box-shadow: none;
+	-webkit-box-shadow: 0;
+}
+.file:focus{
+	color: transparent;
+	border: 0;
+	box-shadow: none;
+	outline: none;
+}
+.file:active{
+	outline: none;
+}
+.modal-footer{
+	border: 0;
+}
+.ueditor{
+	border: 0 !important;
+}
+.modal-header .close{
+	outline: none;
+}
+
+/*富文本样式*/
+.edui-default .edui-editor{
+	width: 520px;
+}
