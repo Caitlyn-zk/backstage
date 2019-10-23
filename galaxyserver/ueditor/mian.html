@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后台界面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/ghgpublic.css"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+	<script src="http://192.168.97.251:3000/ueditor.config.js"></script>
+	<script src="http://192.168.97.251:3000/ueditor.all.js"></script>
+	<body>
+		<!-- 标题 -->
+		<div class="ghg-back-title clearfix">
+			<div class="ghg-back-logo">
+				<img src="img/logo.png" />
+			</div>
+			<div class="ghg-back-login">
+				<p>欢迎，</p>
+				<p><a  class="ghg-outlogon">退出</a></p>
+			</div>
+		</div>
+			
+		<!-- 右边内容样式 -->
+		<div class="ghg-clearfix ghg-back-box">
+			<!-- 左边 -->
+			<ul class="leftsidebar-list ghg-float-left">
+					<li class="on">
+						<span class="ghg-leftTitle">
+							<b class="iconfont icon-jia on"></b>
+							<span class="ghg-leftcont">首页</span>
+						</span>
+					</li>
+					<li>
+						<span class="ghg-leftTitle ghg-clearfix">
+							<b class="iconfont icon-leimupinleifenleileibie1-copy"></b>
+							<span class="ghg-leftcont">集团新闻</span>
+							<b class="ghg-float-right ghg-tab-inco iconfont icon-down-fill-xs"></b>
+						</span>
+					</li>
+					<li>
+						<span class="ghg-leftTitle ghg-clearfix">
+							<b class="iconfont icon-hehuoren"></b>
+							<span class="ghg-leftcont">业务动态</span>
+							<b class="ghg-float-right  ghg-tab-inco iconfont icon-down-fill-xs"></b>
+						</span>
+					</li>
+					<li>
+						<span class="ghg-leftTitle ghg-clearfix">
+							<b class="iconfont icon-xinwen"></b>
+							<span class="ghg-leftcont">星河视频</span>
+							<b class="ghg-float-right ghg-tab-inco  iconfont icon-down-fill-xs"></b>
+						</span>
+					</li>
+					<li>
+						<span class="ghg-leftTitle ghg-clearfix">
+							<b class="iconfont icon-zhaopin"></b>
+							<span class="ghg-leftcont">留言</span>
+							<b class="ghg-float-right  ghg-tab-inco iconfont icon-down-fill-xs"></b>
+						</span>
+					</li>
+					<li>
+						<span class="ghg-leftTitle ghg-clearfix">
+							<b class="iconfont icon-yuyue"></b>
+							<span class="ghg-leftcont">合作伙伴</span>
+							<b class="ghg-float-right  ghg-tab-inco iconfont icon-down-fill-xs"></b>
+						</span>
+					</li>
+					<li>
+						<span class="ghg-leftTitle ghg-clearfix">
+							<b class="iconfont icon-icon-toolbar-hr-recruitment"></b>
+							<span class="ghg-leftcont">人才招聘</span>
+							<b class="ghg-float-right  ghg-tab-inco iconfont icon-down-fill-xs"></b>
+						</span>
+					</li>
+				</ul>
+			<!-- 右边 -->
+			<div class="ghg-content-a">
+				<!-- 首页 -->
+				<div class="ghg-back-content active on">
+					<!-- <img class="banner" src="./img/galaxy.jpg" alt=""> -->
+				</div>
+				<!-- 集团新闻 -->
+				<div class="ghg-back-content ">
+					<div class="ghg-back-content-title ghg-clearfix">
+						<span class=" ghg-float-left iconfont icon-leimupinleifenleileibie1-copy"></span>
+						<div class="ghg-float-left ghg-back-anchor">
+							<a>集团新闻</a>
+						</div>
+					</div>
+					<div class="ghg-back-page">
+						<form>
+							<div class="ghg-back-inp ghg-clearfix">
+								<!-- 按钮 -->
+								<a class="ghg-back-buttom " data-toggle="modal" data-target="#newsModal">添加</a>
+							</div>
+							<!-- tab表格 -->
+							<div class="ghg-back-getnews"></div>
+						</form>
+					</div>
+				</div>
+				<!-- 业务动态 -->
+				<div class="ghg-back-content ">
+					<div class="ghg-back-content-title ghg-clearfix">
+						<span class=" ghg-float-left iconfont icon-hehuoren"></span>
+						<div class="ghg-float-left ghg-back-anchor">
+							<a>业务动态</a>
+							<span>-</span>
+							<span>公共管理</span>
+						</div>
+					</div>
+					<div class="ghg-back-page">
+						<form>
+							<div class="ghg-back-inp ghg-clearfix">
+								<!-- 按钮 -->
+								<a class="ghg-back-buttom ghg-adddynamic-btn" data-toggle="modal" data-target="#dynamicModal">添加</a>
+							</div>
+							<!-- tab表格 -->
+							<div class="ghg-margin-30-top ghg-back-dynamic"></div>
+						
+						</form>
+					</div>
+				</div>
+				<!-- 星河视频 -->
+				<div class="ghg-back-content ">
+					<div class="ghg-back-content-title ghg-clearfix">
+						<span class=" ghg-float-left iconfont icon-xinwen"></span>
+						<div class="ghg-float-left ghg-back-anchor">
+							<a>星河视频</a>
+						</div>
+					</div>
+					<div class="ghg-back-page">
+						<form>
+							<div class="ghg-back-inp ghg-clearfix">
+								<!-- 按钮 -->
+								<a class="ghg-back-buttom" data-toggle="modal" data-target="#addVideoModal" >添加</a>
+							</div>
+							<!-- tab表格 -->
+							<div class="ghg-back-getvideo"></div>
+						</form>
+					</div>
+				</div>
+				<!-- 留言 -->
+				<div class="ghg-back-content ">
+					<div class="ghg-back-content-title ghg-clearfix">
+						<span class=" ghg-float-left iconfont icon-zhaopin"></span>
+						<div class="ghg-float-left ghg-back-anchor">
+							<a>留言</a>
+						</div>
+					</div>
+					<div class="ghg-back-page">
+						<form>
+							
+							<!-- tab表格 -->
+							<div class="ghg-back-addmessage"></div>
+						</form>
+					</div>
+				</div>
+				<!-- 合作伙伴 -->
+				<div class="ghg-back-content ">
+					<div class="ghg-back-content-title ghg-clearfix">
+						<span class=" ghg-float-left iconfont icon-yuyue"></span>
+						<div class="ghg-float-left ghg-back-anchor">
+							<a>合作伙伴</a>
+						</div>
+					</div>
+					<div class="ghg-back-page">
+						<form>
+							<div class="ghg-back-inp ghg-clearfix">
+								<!-- 按钮 -->
+								<a class="ghg-back-buttom ghg-addAlliance-btn"  data-toggle="modal" data-target="#addAllianceModal" >添加</a>
+							</div>
+							<!-- tab表格 -->
+							<div class="ghg-back-getalliance"></div>
+						</form>
+					</div>
+				</div>
+				<!-- 人才招聘  -->
+				<div class="ghg-back-content ">
+					<div class="ghg-back-content-title ghg-clearfix">
+						<span class=" ghg-float-left iconfont icon-icon-toolbar-hr-recruitment"></span>
+						<div class="ghg-float-left ghg-back-anchor">
+							<a>人才招聘</a>
+						</div>
+					</div>
+					<div class="ghg-back-page">
+						<form>
+							<div class="ghg-back-inp ghg-clearfix">
+								<!-- 按钮 -->
+								<a class="ghg-back-buttom" data-toggle="modal" data-target="#addAdvertiseModal" >添加</a>
+							</div>
+							<!-- tab表格 -->
+							<div class="ghg-back-getadvertise"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- Modal -->
+		<!--添加新闻-->
+		<div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		    <div class="modal-dialog" role="document">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">添加新闻</h4>
+		      		</div>
+			        <div class="modal-body">
+			        	<form class="form-horizontal addnews-form">
+						    <div class="form-group">
+							    <label for="inputEmail3" class="col-sm-2 control-label">新闻图片</label>
+							    <div class="col-sm-10">
+							      <input type="file" name="newsUploader" class="form-control file"  accept="image/*">
+							    </div>
+						    </div>
+						    <div class="form-group">
+							    <label for="inputPassword3" class="col-sm-2 control-label">新闻标题</label>
+							    <div class="col-sm-10">
+							      <input type="text" name="title" class="form-control" placeholder="请输入新闻标题">
+							    </div>
+						    </div>
+						    <div class="form-group">
+							    <label for="inputPassword3" class="col-sm-2 control-label">新闻时间</label>
+							    <div class="col-sm-10">
+							      <input type="date" name="time" class="form-control" value="2019-10-20">
+							    </div>
+						    </div>
+						    <div class="form-group ">
+								<label for="inputPassword3" class="col-sm-2 control-label">新闻详情</label>
+								<input type="hidden" name="text" class="addNewsText" >
+								<div class="col-sm-10">
+									<script style="width: 468px;height:250px;" id="editor" type="text/plain"></script>
+								</div>
+								
+						    	<!-- <iframe class="col-sm-12 ueditor" id="ghg-ueditor" frameborder="no" src="http://192.168.97.251:3000/index.html" width="520px" height="250px"></iframe> -->
+						    </div>
+						    
+						</form>
+			        </div>
+		        <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			        <button type="button" class="btn btn-primary addNews" >立即添加</button>
+		        </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- 修改新闻 -->
+		<div class="modal fade" id="updtenewsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">修改新闻</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal updatenews-form">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">新闻图片</label>
+								<div class="col-sm-10">
+									<input type="file" name="newsUploader" class="form-control file"  accept="image/*">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">新闻标题</label>
+								<div class="col-sm-10">
+									<input type="text" name="title" class="form-control updateNewsTitle" placeholder="请输入新闻标题">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">新闻时间</label>
+								<div class="col-sm-10">
+									<input type="date" name="time" class="form-control updateNewsTime" >
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">新闻详情</label>
+								<input type="hidden" name = "id" class="updatenewsId">
+								<input type="hidden" name="text" class="updatenewsText" >
+								<div class="col-sm-10">
+									<script style="width: 468px;height:250px;" id="editor1" type="text/plain"></script>
+								</div>
+								<!-- <iframe class="col-sm-12 ueditor" id="ghg-ueditor" frameborder="no" src="http://192.168.97.251:3000/index.html" width="520px" height="250px"></iframe> -->
+							</div>
+							
+						</form>
+					</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary updateNews" >立即修改</button>
+				</div>
+			</div>
+			</div>
+		</div>		
+		<!-- 添加动态 -->
+		<div class="modal fade" id="dynamicModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+						<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">添加动态</h4>
+						</div>
+					<div class="modal-body">
+						<form class="form-horizontal adddynamic-form">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">动态图片</label>
+								<div class="col-sm-10">
+									<input type="file" name="dynaimicUploader" class="form-control file"  accept="image/*">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">动态标题</label>
+								<div class="col-sm-10">
+									<input type="text" name="title" class="form-control" placeholder="请输入新闻标题">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">动态时间</label>
+								<div class="col-sm-10">
+									<input type="date" name="time" class="form-control" value="2019-10-20">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">动态分类</label>
+								<div class="col-sm-10">
+									<select name="classify" class="col-sm-10 form-control dynamicClassify">
+										
+									</select>
+									<!-- <input type="number" name="classify" class="form-control"> -->
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">动态详情</label>
+								<input type="hidden" name="text" class="adddynamicText" >
+
+								<div class="col-sm-10">
+									<script style="width: 468px;height:250px;" id="editor2" type="text/plain"></script>
+								</div>
+								<!-- <iframe class="col-sm-12 ueditor" id="ghg-ueditor" frameborder="no" src="http://192.168.97.251:3000/index.html" width="520px" height="250px"></iframe> -->
+							</div>
+							
+						</form>
+					</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary addDynamic" >立即添加</button>
+				</div>
+			</div>
+			</div>
+		</div>		
+		<!-- 修改动态 -->
+		<div class="modal fade" id="updateDynamicModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+						<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">修改动态</h4>
+						</div>
+					<div class="modal-body">
+						<form class="form-horizontal updatedynamic-form">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">动态图片</label>
+								<div class="col-sm-10">
+									<input type="file" name="dynaimicUploader" class="form-control file"  accept="image/*">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">动态标题</label>
+								<div class="col-sm-10">
+									<input type="text" name="title" class="form-control updatedynamicTitle" placeholder="请输入新闻标题">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label ">动态时间</label>
+								<div class="col-sm-10">
+									<input type="date" name="time" class="form-control updatedynamicTime" >
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">动态分类</label>
+								<div class="col-sm-10">
+										<select name="classify" class="col-sm-10 form-control dynamicClassify updatedynamicClassify">
+											
+										</select>
+									<!-- <input type="number" name="classify" class="form-control"> -->
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">动态详情</label>
+								<input type="hidden" name="id" class="updatedynamicId">
+								<input type="hidden" name="text" class="updatedynamicText">
+								<div class="col-sm-10">
+									<script style="width: 468px;height:250px;" id="editor3" type="text/plain"></script>
+								</div>
+								<!-- <iframe class="col-sm-12 ueditor" id="ghg-ueditor" frameborder="no" src="http://192.168.97.251:3000/index.html" width="520px" height="250px"></iframe> -->
+							</div>
+							
+						</form>
+					</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary updateDynamic" >立即修改</button>
+				</div>
+			</div>
+			</div>
+		</div>
+		<!-- 添加视频 -->
+		<div class="modal fade" id="addVideoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">添加视频</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal addvideo-form">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">视频截图</label>
+								<div class="col-sm-10">
+									<input type="file" name="videoUploader" value="添加截图" class="form-control file"  accept="image/*">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">视频</label>
+								<div class="col-sm-10">
+									<input type="file" name="videoUploader" value="添加视频" class="form-control file"  accept="video/*,audio/*">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">视频标题</label>
+								<div class="col-sm-10">
+									<input type="text" name="title" class="form-control" placeholder="请输入新闻标题">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">视频时间</label>
+								<div class="col-sm-10">
+									<input type="date" name="time" class="form-control" value="2019-10-20">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary addVideoNow" >立即添加</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 修改视频 -->
+		<div class="modal fade" id="updateVideoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">修改视频</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal updateVideo-form">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">视频截图</label>
+								<div class="col-sm-10">
+									<input type="file" name="videoUploader" value="添加截图" class="form-control file"  accept="image/*">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">视频</label>
+								<div class="col-sm-10">
+									<input type="file" name="videoUploader" class="form-control file"  accept="image/*">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">视频标题</label>
+								<div class="col-sm-10">
+									<input type="text" name="title" class="form-control updatevideoTitle" placeholder="请输入视频标题">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">视频时间</label>
+								<div class="col-sm-10">
+									<input type="date" name="time" class="form-control updatevideoTime" >
+									<input type="hidden" name = "id" class="videoId">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary updateVideo" >立即修改</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 添加合作伙伴 -->
+		<div class="modal fade" id="addAllianceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">添加合作伙伴</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal addalliance-form">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">图片</label>
+								<div class="col-sm-10">
+									<input type="file" name="allianceUploader" class="form-control file"  accept="image/*">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">合作伙伴</label>
+								<div class="col-sm-10">
+									<input type="text" name="name" class="form-control" placeholder="请输入合作伙伴名">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">分类</label>
+								<div class="col-sm-10">
+									<select name="classify" class="col-sm-10 form-control allianceClassify">
+									
+									</select>
+									<!-- <input type="number" name="classify" class="form-control" > -->
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary addAlliance" >立即添加</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 修改合作伙伴 -->
+		<div class="modal fade" id="updateAllianceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+						<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">修改合作伙伴</h4>
+						</div>
+					<div class="modal-body">
+						<form class="form-horizontal updateAlliance-form">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">动态图片</label>
+								<div class="col-sm-10">
+									<input type="file" name="allianceUploader" class="form-control file"  accept="image/*">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">合作伙伴名</label>
+								<div class="col-sm-10">
+									<input type="text" name="name" class="form-control updateallianceName" placeholder="请输入合作伙伴">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">合作伙伴分类</label>
+								<div class="col-sm-10">
+									<input type="hidden" name="id" class="allianceId">
+									<select name="classify" class="col-sm-10 form-control allianceClassify updateallianceClassify">
+									
+									</select>
+								</div>
+							</div>
+						</form>
+					</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary updateAlliance" >立即修改</button>
+				</div>
+			</div>
+			</div>
+		</div>
+		<!-- 添加招聘信息 -->
+		<div class="modal fade" id="addAdvertiseModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+						<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">添加招聘信息</h4>
+						</div>
+					<div class="modal-body">
+						<form class="form-horizontal addAdvertise-form">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">部门</label>
+								<div class="col-sm-10">
+									<input type="text" name="section" class="form-control "  >
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">岗位</label>
+								<div class="col-sm-10">
+									<input type="text" name="name" class="form-control" placeholder="请输入岗位">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">地区</label>
+								<div class="col-sm-10">
+									<input type="text" name="place" class="form-control" >
+								</div>
+							</div>
+							
+						</form>
+					</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary addAdvertise" >立即修改</button>
+				</div>
+			</div>
+			</div>
+		</div>
+		<!-- 修改招聘信息 -->
+		<div class="modal fade" id="updateAdvertiseModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+						<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">修改招聘信息</h4>
+						</div>
+					<div class="modal-body">
+						<form class="form-horizontal updateAdvertise-form">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">部门</label>
+								<div class="col-sm-10">
+									<input type="text" name="section" class="form-control updateadvertiseSection "  >
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">岗位</label>
+								<div class="col-sm-10">
+									<input type="text" name="name" class="form-control updateadvertiseName" placeholder="请输入岗位">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">地区</label>
+								<div class="col-sm-10">
+									<input type="text" name="place" class="form-control updateadvertisePlace" >
+									<input type="hidden" name="id" class="advertiseId">
+								</div>
+							</div>
+							
+						</form>
+					</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary updateAdervtise" >立即修改</button>
+				</div>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>
+<!-- 集团新闻模板引擎 -->
+<script type="text/html" id="ghg-about-getnew">
+	<div class="ghg-margin-30-top">
+		<table border="0" cellspacing="0" cellpadding="0" class="ghg-back-table">
+			<tr>
+				<td style="width: 66px;"  class="ghg-back-th">序号</td>
+				<td style="width: 435px;" class="ghg-back-th">图片</td>
+				<td style="width: 400px;" class="ghg-back-th">新闻标题</td>
+				<td style="width: 630px;" class="ghg-back-th">新闻内容</td>
+				<td style="width: 130px;" class="ghg-back-th">操作</td>
+			</tr>
+			{{each data as item i}}
+				<tr>
+					<td style="width: 66px;"  class="ghg-back-td">{{item.id}}</td>
+					<td style="width: 435px;" class="ghg-back-td">
+						<img src=" http://192.168.97.251:3000/news/{{item.img}}" />
+					</td>
+					<td style="width: 400px;" class="ghg-back-td">
+						<span class="ghg-text-hidden">{{item.title}}</span>
+					</td>
+					<td style="width: 630px;" class="ghg-back-td">
+						<span class="ghg-text-hidden">{{item.text}}</span>
+					</td>
+					<td style="width: 130px;" class="ghg-back-td">
+						<a class="iconfont icon-pinglun-copy-copy ghg-margin-5-left" data-toggle="modal" data-target="#updtenewsModal"></a>
+						<a class="iconfont icon-laji"></a>
+					</td>
+				</tr>
+			{{/each}}
+		</table>
+	</div>
+</script>
+<!-- 业务动态 -->
+<script  type="text/html" id="ghg-back-dynamic">
+	<div class="ghg-margin-30-top">
+		<table border="0" cellspacing="0" cellpadding="0" class="ghg-back-table">
+			<tr>
+				<td style="width: 66px;"  class="ghg-back-th">序号</td>
+				<td style="width: 435px;" class="ghg-back-th">图片</td>
+				<td style="width: 400px;" class="ghg-back-th">标题</td>
+				<td style="width: 200px;" class="ghg-back-th">添加内容</td>
+				<td style="width: 330px;" class="ghg-back-th">添加时间</td>
+				<td style="width: 130px;" class="ghg-back-th">操作</td>
+			</tr>
+			{{each data as item i}}
+				<tr>
+					<td style="width: 66px;"  class="ghg-back-td">{{item.id}}</td>
+					<td style="width: 435px;" class="ghg-back-td">
+						<img src="http://192.168.97.251:3000/dynamic/{{item.img}}" />
+					</td>
+					<td style="width: 400px;" class="ghg-back-td">
+						<span class="ghg-text-hidden">{{item.title}}</span>
+					</td>
+					<td style="width: 630px;" class="ghg-back-td">
+						<span class="ghg-text-hidden">{{item.text}}</span>
+					</td>
+					<td style="width: 330px;" class="ghg-back-td">{{item.createTime}}</td>
+					<td style="width: 130px;" class="ghg-back-td">
+						<a class="iconfont icon-pinglun-copy-copy ghg-margin-5-left" data-toggle="modal" data-target="#updateDynamicModal"></a>
+						<a class="iconfont icon-laji"></a>
+					</td>
+				</tr>
+			{{/each}}
+		</table>
+	</div>
+						
+</script>
+<!-- 留言 -->
+<script type="text/html" id="ghg-back-addmessage">
+	
+	<div class="ghg-margin-30-top">
+		<table border="0" cellspacing="0" cellpadding="0" class="ghg-back-table">
+			<tr>
+				<td style="width: 66px;"  class="ghg-back-th">序号</td>
+				<td style="width: 130px;" class="ghg-back-th">用户名</td>
+				<td style="width: 80px;" class="ghg-back-th">门牌号</td>
+				<td style="width: 140px;" class="ghg-back-th">邮箱</td>
+				<td style="width: 130px;" class="ghg-back-th">电话号码</td>
+				<td style="width: 196px;" class="ghg-back-th">评论</td>
+				<td style="width: 140px;" class="ghg-back-th">评论时间</td>
+				<td style="width: 130px;" class="ghg-back-th">操作</td>
+			</tr>
+			{{each data as item i}}
+				<tr>
+				<td style="width: 66px;"  class="ghg-back-td">{{item.id}}</td>
+				<td style="width: 130px;" class="ghg-back-td">
+					{{item.name}}
+				</td>
+				<td style="width: 80px;" class="ghg-back-td">
+					<span class="ghg-text-hidden">{{item.number}}</span>
+				</td>
+				<td style="width: 140px;" class="ghg-back-td">
+					{{item.email}}
+				</td>
+				<td  style="width: 130px;" class="ghg-back-td">
+					{{item.tel}}
+				</td>
+				<td style="width: 196px;" class="ghg-back-td">
+					<span class="ghg-text-hidden">{{item.message}}</span>
+				</td>
+				<td style="width: 130px;" class="ghg-back-td">
+					{{item.createTime}}
+				</td>
+				<td style="width: 130px;" class="ghg-back-td">
+					<a class="iconfont icon-laji deleteMessage"></a>
+				</td>
+			</tr>
+			{{/each}}
+		</table>
+	</div>
+						
+	
+</script>
+<!-- 视频 -->
+<script type="text/html" id="ghg-about-getvideo">
+	<div class="ghg-margin-30-top">
+		<table border="0" cellspacing="0" cellpadding="0" class="ghg-back-table">
+			<tr>
+				<td style="width: 66px;"  class="ghg-back-th">序号</td>
+				<td style="width: 630px;" class="ghg-back-th">视频截图</td>
+				<td style="width: 435px;" class="ghg-back-th">视频</td>
+				<td style="width: 400px;" class="ghg-back-th">视频标题</td>
+				<td style="width: 130px;" class="ghg-back-th">操作</td>
+			</tr>
+			{{each data as item i}}
+				<tr>
+					<td style="width: 66px;"  class="ghg-back-td">{{item.id}}</td>
+					<td style="width: 630px;" class="ghg-back-td">
+						<img  src="http://192.168.97.251:3000/video/{{item.videoImg}}" class="ghg-text-hidden ghg-videoImG"/>
+					</td>
+					<td style="width: 435px;" class="ghg-back-td">
+						<video width="200" height="200" controls="controls" >
+							<source src="http://192.168.97.251:3000/video/{{item.video}}" type="video/mp4"></source>
+							<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+								<param name="movie" value="myvideo.swf" />
+								<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+							</object>
+							当前浏览器不支持 video直接播放，点击这里下载视频： <a href="http://192.168.97.251:3000/video/{{item.video}}">下载视频</a>
+						</video>
+					</td>
+					<td style="width: 400px;" class="ghg-back-td">
+							<span class="ghg-text-hidden-4">{{item.title}}</span>
+					</td>
+					<td style="width: 130px;" class="ghg-back-td">
+						<a class="iconfont icon-pinglun-copy-copy ghg-margin-5-left" data-toggle="modal" data-target="#updateVideoModal"></a>
+						<a class="iconfont icon-laji deleteVideo"></a>
+					</td>
+				</tr>
+			{{/each}}
+		</table>
+	</div>
+</script>
+<!-- 合作伙伴 -->
+<script type="text/html" id="ghg-back-getalliance">
+	<div class="ghg-margin-30-top">
+		<table border="0" cellspacing="0" cellpadding="0" class="ghg-back-table">
+			<tr>
+				<td style="width: 66px;"  class="ghg-back-th">序号</td>
+				<td style="width: 400px;" class="ghg-back-th">公司logo</td>
+				<td style="width: 435px;" class="ghg-back-th">公司名称</td>
+				<td style="width: 130px;" class="ghg-back-th">操作</td>
+			</tr>
+			{{each data as item i}}
+				<tr>
+					<td style="width: 66px;"  class="ghg-back-td">{{item.id}}</td>
+					<td style="width: 400px;" class="ghg-back-td">
+						<img src="http://192.168.97.251:3000/alliance/{{item.img}}" />
+					</td>
+					<td style="width: 435px;" class="ghg-back-td">
+						<span class="ghg-text-hidden">{{item.name}}</span>
+					</td>
+					<td style="width: 130px;" class="ghg-back-td">
+						<a class="iconfont icon-pinglun-copy-copy ghg-margin-5-left " data-toggle="modal" data-target="#updateAllianceModal"></a>
+						<a class="iconfont icon-laji deleteAlliance"></a>
+					</td>
+				</tr>
+			{{/each}}
+		</table>
+	</div>
+						
+</script>
+<!-- 招聘 -->
+<script type="text/html" id="ghg-back-getadvertise">
+	<div class="ghg-margin-30-top">
+		<table border="0" cellspacing="0" cellpadding="0" class="ghg-back-table">
+			<tr>
+				<td style="width: 66px;"  class="ghg-back-th">序号</td>
+				<td style="width: 400px;" class="ghg-back-th">公司集团</td>
+				<td style="width: 435px;" class="ghg-back-th">招聘岗位</td>
+				<td style="width: 130px;" class="ghg-back-th">工作地点</td>
+				<td style="width: 130px;" class="ghg-back-th">操作</td>
+			</tr>
+			{{each data as item i}}
+				<tr>
+					<td style="width: 66px;"  class="ghg-back-td">{{item.id}}</td>
+					<td style="width: 400px;" class="ghg-back-td">
+						{{item.section}}
+					</td>
+					<td style="width: 435px;" class="ghg-back-td">
+						<span class="ghg-text-hidden">{{item.name}}</span>
+					</td>
+					<td style="width: 130px;" class="ghg-back-td">{{item.place}}</td>
+					<td style="width: 130px;" class="ghg-back-td">
+						<a class="iconfont icon-pinglun-copy-copy ghg-margin-5-left" data-toggle="modal" data-target="#updateAdvertiseModal"></a>
+						<a class="iconfont icon-laji"></a>
+					</td>
+				</tr>
+			{{/each}}
+		</table>
+	</div>
+						
+	
+</script>
+<script src="./js/jquery-2.1.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="./js/template.js"></script>
+<script src="./js/bootstrap-toolTip.js"></script>
+<script src="./js/api.js"></script>
+<script src="./js/mian.js"></script>
+

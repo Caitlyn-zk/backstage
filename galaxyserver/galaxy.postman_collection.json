@@ -1,0 +1,1211 @@
+{
+	"info": {
+		"_postman_id": "01181f0e-38a4-409a-8f57-1284cc465adf",
+		"name": "galaxy",
+		"description": "星河控股项目的后台接口测试",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "getNews",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.97.251:3000/getnews",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"getnews"
+							]
+						},
+						"description": "获取新闻"
+					},
+					"response": []
+				},
+				{
+					"name": "updatenews",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "newsUploader",
+									"type": "file",
+									"src": "/C:/Users/Public/Pictures/Sample Pictures/Desert.jpg"
+								},
+								{
+									"key": "title",
+									"value": "标题测试",
+									"description": "新闻标题",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "内容",
+									"description": "新闻内容",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "2019-10-18",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/updatenews?id=21&img=gzt&title=这是更改新闻接口测试&text=这个是新闻内容",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"updatenews"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "21"
+								},
+								{
+									"key": "img",
+									"value": "gzt",
+									"description": "图片地址"
+								},
+								{
+									"key": "title",
+									"value": "这是更改新闻接口测试",
+									"description": "新闻标题"
+								},
+								{
+									"key": "text",
+									"value": "这个是新闻内容",
+									"description": "新闻内容"
+								}
+							]
+						},
+						"description": "更改新闻接口测试"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteNews",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "23",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/deletenews?id=1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"deletenews"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "删除新闻"
+					},
+					"response": []
+				},
+				{
+					"name": "addnews",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "newsUploader",
+									"type": "file",
+									"src": "/C:/Users/Public/Pictures/Sample Pictures/Penguins.jpg"
+								},
+								{
+									"key": "title",
+									"value": "添加新闻",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "这也是新闻详情",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "2019-10-20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/addnews",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"addnews"
+							]
+						},
+						"description": "添加新闻请求"
+					},
+					"response": []
+				}
+			],
+			"description": "星河控股项目：新闻模块链接测试",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "张三",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "e10adc3949ba59abbe56e057f20f883e",
+									"type": "text"
+								},
+								{
+									"key": "verify",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/login",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifylogin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/verifylogin?token",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"verifylogin"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "星河控股项目：后台登录接口测试",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "dynamic",
+			"item": [
+				{
+					"name": "getdynamic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "classify",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/getdynamicByClass?classify=1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"getdynamicByClass"
+							],
+							"query": [
+								{
+									"key": "classify",
+									"value": "1"
+								}
+							]
+						},
+						"description": "获取动态接口"
+					},
+					"response": []
+				},
+				{
+					"name": "adddynamic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "dynaimicUploader",
+									"type": "file",
+									"src": "/C:/Users/Public/Pictures/Sample Pictures/Tulips.jpg"
+								},
+								{
+									"key": "time",
+									"value": "2222-12-12",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "集团动态标题",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "集团动态详情",
+									"type": "text"
+								},
+								{
+									"key": "classify",
+									"value": "1",
+									"description": "集团动态分类",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/adddynamic",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"adddynamic"
+							]
+						},
+						"description": "添加动态"
+					},
+					"response": []
+				},
+				{
+					"name": "updatedynamic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "dynaimicUploader",
+									"type": "file",
+									"src": "/C:/Users/Public/Pictures/Sample Pictures/Koala.jpg"
+								},
+								{
+									"key": "time",
+									"value": "2019-10-15",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "这是一个更改的动态标题",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "这是一个更改的动态详情",
+									"type": "text"
+								},
+								{
+									"key": "classify",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/updatedynamic",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"updatedynamic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletedynamic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/deletedynamic?id=1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"deletedynamic"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "星河控股：集团动态 的接口测试",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "video",
+			"item": [
+				{
+					"name": "getvideo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.97.251:3000/getvideo",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"getvideo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatevideo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "videoUploader",
+									"type": "file",
+									"src": "/E:/teamWork/集团资料.mp3"
+								},
+								{
+									"key": "title",
+									"value": "更改视频标题",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "2019-10-18",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/updatevideo",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"updatevideo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addvideo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "videoUploader",
+									"type": "file",
+									"src": "/E:/teamWork/集团资料.mp3"
+								},
+								{
+									"key": "title",
+									"value": "添加2",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "2016-10-12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/addvideo",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"addvideo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletevideo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/deletevideo",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"deletevideo"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "星河控股项目：星河视频接口测试",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "advertise",
+			"item": [
+				{
+					"name": "getadvertise",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.97.251:3000/getadvertise",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"getadvertise"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateadvertise",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "section",
+									"value": "xxxx",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "vvv",
+									"type": "text"
+								},
+								{
+									"key": "place",
+									"value": "重庆",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/updateadvertise",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"updateadvertise"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addadvertise",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "section",
+									"value": "sss",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "gzt",
+									"type": "text"
+								},
+								{
+									"key": "place",
+									"value": "ch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/addadvertise?section=mmmm&name=gzt&place=cha",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"addadvertise"
+							],
+							"query": [
+								{
+									"key": "section",
+									"value": "mmmm"
+								},
+								{
+									"key": "name",
+									"value": "gzt"
+								},
+								{
+									"key": "place",
+									"value": "cha"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteadvertise",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/deleteadvertise?id=1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"deleteadvertise"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "星河控股项目：星河招聘接口测试",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "addmessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "郭治涛",
+									"type": "text"
+								},
+								{
+									"key": "number",
+									"value": "10-15",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "2622353599@qq.com",
+									"type": "text"
+								},
+								{
+									"key": "tel",
+									"value": "18323929404",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "是四大美女",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/addmessage",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"addmessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletemessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/deletemessage",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"deletemessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getmessage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.97.251:3000/getmessage",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"getmessage"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "星河控股项目:星河留言接口测试",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "alliance",
+			"item": [
+				{
+					"name": "addalliance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "allianceUploader",
+									"type": "file",
+									"src": "/E:/teamWork/img/news1.jpg"
+								},
+								{
+									"key": "name",
+									"value": "灌灌灌灌",
+									"type": "text"
+								},
+								{
+									"key": "classify",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/addalliance",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"addalliance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getalliance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.97.251:3000/getalliance",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"getalliance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatealliance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "allianceUploader",
+									"type": "file",
+									"src": "/E:/teamWork/img/news9.jpg"
+								},
+								{
+									"key": "name",
+									"value": "更改合作伙伴",
+									"type": "text"
+								},
+								{
+									"key": "classify",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/updatealliance?allianceUploader",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"updatealliance"
+							],
+							"query": [
+								{
+									"key": "allianceUploader",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletealliance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/deletealliance",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"deletealliance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallianceByClass",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "classify",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.97.251:3000/getallianceByClass?classify=1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"97",
+								"251"
+							],
+							"port": "3000",
+							"path": [
+								"getallianceByClass"
+							],
+							"query": [
+								{
+									"key": "classify",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "星河控股项目：合作伙伴接口测试",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

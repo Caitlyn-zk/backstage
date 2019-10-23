@@ -1,0 +1,16 @@
+.edui-editor.edui-default{
+    width: 557px !important;
+    z-index: 999;
+}
+.edui-editor-iframeholder.edui-default{
+    width: 557px !important;
+    height: 140px !important;
+    z-index: 999;
+    overflow: hidden;
+} 
+ #btns{
+    display: none;
+} 
+ #editor{
+    width: 557px !important;
+}
