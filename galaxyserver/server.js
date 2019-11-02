@@ -9,12 +9,27 @@ let urlencoded = bodyParser.urlencoded({extended:false})
 let app = express()
 app.use(jsonParse)
 app.use(urlencoded)
+
+let options = {
+    dotfiles: 'ignore',
+    etag: false,
+    extensions: ['html', 'htm'],
+    index: false,
+    maxAge: '1d',
+    redirect: false,
+    setHeaders: function(res, path,stat){
+        res.set('x-timestamp', Date.now())
+    }
+
+}
+
 // 上传图片的地址  图片或者文件服务器
 app.use(express.static(__dirname+ '/static'))
 // ueditor  配置文件的静态服务器地址
 app.use(express.static(__dirname+ '/nodejs'))
 app.use(express.static(__dirname+'/ueditor'))
 app.use(express.static(__dirname+'/ued'))
+
 // 跨域
 app.all('*',function(req,res,next){
     res.header( 'Access-Control-Allow-Origin', '*' );
@@ -26,6 +41,8 @@ app.all('*',function(req,res,next){
     res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
     next()
 })
+
+
 // ueditor
 app.use("/ueditor/ue", ueditor(path.join(__dirname, 'static'), router.ueditor));
 // 登录
